@@ -1,0 +1,166 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Fraunces:wght@700&display=swap");
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+header {
+	display: flex;
+	width: 100%;
+	height: 100vh;
+
+	justify-content: center;
+	align-items: center;
+
+	background-color: hsl(30, 38%, 92%);
+}
+.grid-container {
+	display: grid;
+	grid-template-columns: auto auto;
+	width: 600px;
+	height: 450px;
+
+	border-radius: 10px;
+
+	background-color: white;
+}
+
+.img {
+	width: 300px;
+	border-radius: 10px 0 0 10px;
+}
+
+.product-details {
+	display: grid;
+	grid-template-columns: auto auto;
+	padding: 32px;
+}
+
+.product-details > h2 {
+	font-family: "Montserrat";
+	font-weight: 500;
+	font-variant: small-caps;
+
+	font-size: 16px;
+	color: hsl(228, 12%, 48%);
+	letter-spacing: 7px;
+}
+
+.product-details > h1 {
+	grid-column: 1 / span 2;
+	font-family: "Fraunces", serif;
+	line-height: 30px;
+}
+
+.product-details > p {
+	grid-column: 1 / span 2;
+
+	font-family: "Montserrat";
+	font-size: 14px;
+	font-weight: 400;
+	line-height: 20px;
+	color: hsl(228, 12%, 48%);
+}
+.product-details > span:first-of-type {
+	font-family: "Fraunces";
+	font-size: 32px;
+	color: hsl(158, 36%, 37%);
+
+	align-self: center;
+}
+.product-details > span:last-of-type {
+	font-family: "Montserrat";
+	font-size: 14px;
+	color: hsl(228, 12%, 48%);
+	text-decoration: line-through;
+
+	align-self: center;
+}
+.product-details > button {
+	grid-column: 1 / span 2;
+	color: white;
+	background-color: hsl(158, 36%, 37%);
+
+	font-family: "Montserrat";
+	font-weight: 700;
+
+	align-self: center;
+
+	border-style: none;
+	border-radius: 10px;
+	width: 236px;
+	height: 48px;
+}
+.product-details > button > img {
+	position: relative;
+	right: 10px;
+	top: 4px;
+}
+
+button:hover {
+	background-color: hsl(212, 21%, 14%);
+	cursor: pointer;
+}
+
+@media screen and (max-width: 600px) {
+	.grid-container {
+		display: grid;
+		row-gap: 25px;
+		grid-template-columns: 1fr;
+		grid-template-rows: repeat(5, auto);
+		width: 343px;
+		height: 650px;
+	}
+
+	.img {
+		width: 343px;
+		height: 280px;
+		object-fit: cover;
+		border-radius: 10px 10px 0 0;
+	}
+
+	.product-details {
+		display: grid;
+		gap: 15px;
+		padding: 0 24px;
+	}
+
+	.product-details > button {
+		grid-column: 1 / span 2;
+		justify-self: end;
+
+		color: white;
+		background-color: hsl(158, 36%, 37%);
+
+		font-family: "Montserrat";
+		font-weight: 700;
+
+		align-self: center;
+
+		border-style: none;
+		border-radius: 10px;
+		width: 295px;
+		height: 50px;
+	}
+
+	.product-details > button > img {
+		position: relative;
+		right: 10px;
+		top: 4px;
+	}
+
+	.product-details > span:last-of-type {
+		font-family: "Montserrat";
+		font-size: 14px;
+		color: hsl(228, 12%, 48%);
+		text-decoration: line-through;
+		margin-right: 80px;
+	}
+
+	button:hover {
+		background-color: hsl(212, 21%, 14%);
+		cursor: pointer;
+	}
+}
